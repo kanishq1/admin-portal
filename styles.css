@@ -1,0 +1,161 @@
+body > table{
+    width: 80%;
+}
+.t2{
+    display: flex;
+}
+
+table{
+    border-collapse: collapse;
+}
+table.list, table.list1{
+    width:50%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even),table.list1 thead>tr {
+    background-color: #dddddd;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+}
+
+input[type=text], input[type=number], input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=checkbox]{
+    width:20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=radio]{
+    width:50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+input[type=submit]{
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+   
+
+form div.form-action-buttons,form div.form-action-buttons1{
+    text-align: right;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
+}
+.table{
+    display: flex;
+    
+}
+.event, #subevent1
+{
+    flex-grow: 2;
+    justify-content: space-between;
+    align-self: stretch;
+    order: 2;
+}
+.dash{
+    flex-grow: 1;
+    padding-right: 10px;
+    padding-left: 10px ;
+    background: #a3c4c9;
+}
+#subevent1{
+    visibility: hidden;
+    margin-left: 15px;
+}
+.top2
+{
+    background: #aebdb8;
+    display: inline-flex;
+    height: 80px;
+    width: 100%;
+    
+}
+.top2 label
+{
+    display: flex;
+    text-align: center;
+    align-self: center;
+    margin-left: 1%;
+}
+.top2 nav {
+    margin-left: auto;
+    margin-right: 40px;
+    
+  }
+  .top2 li{
+      display: inline;
+      margin: 0 20px 0 20px;
+  }
+  .top2 a{
+    text-decoration: none;
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .list th,.list1 th{
+      height: 50px;
+      border:black
+  }
+  .list1{
+      margin-left: 4px;
+  }
+  #dashl{
+      
+      justify-content: center;
+      align-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 110%;
+      font-style: bold;
+  }
+  .img{
+      border-style: solid;
+      
+  }
