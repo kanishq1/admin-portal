@@ -20,7 +20,7 @@
         </nav>
     </div>
     <div class=table>
-    <table class="event">
+        <table class="event">
         <tr>
             <td>
                 <form onsubmit="event.preventDefault();onFormSubmit1();" autocomplete="off">
@@ -60,90 +60,92 @@
                     
                 </form>
             </td>
-     </table>
-            <td>
-                <table>
-            <table id="subevent1">
-                <td>
-                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-                        <div>
-                            <label>Name</label><label class="validation-error hide" id="NameValidationError">This field is required.</label>
-                            <input type="text" name="subName" id="subName">
-                        </div>
-                        <div>
-                            <label>Discription</label>
-                            <input type="text" name="desc" id="desc">
-                        </div>
-                        <div>
-                            <label>Price</label>
-                            <input type="text" name="price" id="price">
-                        </div>
-                        <div>
-                            <label>Sizes</label>
-                            <br>
-                            <input type="checkbox" name="size" id="size" value="S"> S
-                            <input type="checkbox" name="size" id="size" value="M"> M
-                            <input type="checkbox" name="size" id="size" value="L"> L
-                            <input type="checkbox" name="size" id="size" value="XL"> XL
-                            <input type="checkbox" name="size" id="size" value="XXL"> XXL
-                        </div>
-                        <br>
+        </table>
             
-                        <div>
-                            <label>Tshirt</label>
-                            <br>
-                            <input type="radio" name="tshirt" id="tshirt" value="Yes"> Yes
-                            <input type="radio" name="tshirt" id="tshirt" value="No"> No
-                            
-                        </div>
-
-                        <div  class="form-action-buttons">
-                            <input type="submit" value="Add SubEvent">
-                        </div>
-                    </form>
-                </td>
-            </table>
-            <div class="dash">
+        <table id="subevent1">
+        <td>
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <div>
+                    <label>Name</label><label class="validation-error hide" id="NameValidationError">This field is required.</label>
+                    <input type="text" name="subName" id="subName">
+                </div>
+                <div>
+                    <label>Discription</label>
+                    <input type="text" name="desc" id="desc">
+                </div>
+                <div>
+                    <label>Price</label>
+                    <input type="text" name="price" id="price">
+                </div>
+                <div>
+                    <label>Sizes</label>
+                    <br>
+                    <input type="checkbox" name="size" id="size" value="S"> S
+                    <input type="checkbox" name="size" id="size" value="M"> M
+                    <input type="checkbox" name="size" id="size" value="L"> L
+                    <input type="checkbox" name="size" id="size" value="XL"> XL
+                    <input type="checkbox" name="size" id="size" value="XXL"> XXL
+                </div>
                 <br>
-                <label id="dashl">Admin Panel Dahboard</label>
-                <hr>
-                <img src="" alt="your image here" class="img">
-            </div>
-        </div>
-        
-            <div class="t2">
-    <table class="list" id="eventList">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>From</th>
-                            <th>Till</th>
-                            <th>Organisation</th>
-                            <th>Expiration</th>
-                            <th>is_expired</th>
-                            
-                            
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
 
-                    </tbody>
-    </table>
-    <table class="list1" id="subeventList">
-        <thead>
-            <tr>
-                <th>Parent Event</th>
-                <th>SubEvent</th>
-                <th>Discription</th>
-                <th>Price</th>
-                <th>Sizes</th>
-                <th>Tshirt</th>               
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
+                <div>
+                    <label>Tshirt</label>
+                    <br>
+                    <input type="radio" name="tshirt" id="tshirt" value="Yes"> Yes
+                    <input type="radio" name="tshirt" id="tshirt" value="No"> No
+                    
+                </div>
+
+                <div  class="form-action-buttons">
+                    <input type="submit" value="Add SubEvent">
+                </div>
+            </form>
+        </td>
+        </table>
+
+        <div class="dash">
+            <br>
+            <label id="dashl">Admin Panel Dahboard</label>
+            <hr>
+            <img src="" alt="your image here" class="img">
         </div>
+    </div>
+        
+    <div class="t2">
+        <table class="list" id="eventList">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>From</th>
+                    <th>Till</th>
+                    <th>Organisation</th>
+                    <th>Expiration</th>
+                    <th>is_expired</th>
+                    
+                    
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <table class="list1" id="subeventList">
+            <thead>
+                <tr>
+                    <th>Parent Event</th>
+                    <th>SubEvent</th>
+                    <th>Discription</th>
+                    <th>Price</th>
+                    <th>Sizes</th>
+                    <th>Tshirt</th>               
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 
          
         
