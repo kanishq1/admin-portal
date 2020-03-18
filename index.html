@@ -2,15 +2,17 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Html CRUD with Pure JavaScript
+        Admin Portal
     </title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="top2">
-        <label>Admin portal</label>
+        <label>ADMIN PORTAL</label>
         <nav>
             <ul>
                 <li><a href="#">Login</a></li>
@@ -20,6 +22,21 @@
         </nav>
     </div>
     <div class=table>
+        <div class="dash">
+            <br>
+            <label id="dashl">Admin Panel Dahboard</label>
+            <hr>
+            <img src="" alt="your image here" class="img">
+            <nav class ="dashitem">
+                <ul>
+                    <li>Your Name</li>
+                    <li>Designation</li>
+                    <li>Department</li>
+                    <br>
+                    <a href="page1.html">SHOW EVENTS</a>
+                </ul>
+            </nav>
+        </div>
         <table class="event">
         <tr>
             <td>
@@ -103,54 +120,12 @@
         </td>
         </table>
 
-        <div class="dash">
-            <br>
-            <label id="dashl">Admin Panel Dahboard</label>
-            <hr>
-            <img src="" alt="your image here" class="img">
-        </div>
-    </div>
         
-    <div class="t2">
-        <table class="list" id="eventList">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>From</th>
-                    <th>Till</th>
-                    <th>Organisation</th>
-                    <th>Expiration</th>
-                    <th>is_expired</th>
-                    
-                    
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-        <table class="list1" id="subeventList">
-            <thead>
-                <tr>
-                    <th>Parent Event</th>
-                    <th>SubEvent</th>
-                    <th>Discription</th>
-                    <th>Price</th>
-                    <th>Sizes</th>
-                    <th>Tshirt</th>               
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
     </div>
-
-         
         
     
     <script src="script.js"></script>
+
 </body>
 
 </html>
