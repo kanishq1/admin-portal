@@ -1,3 +1,6 @@
+body{
+    zoom: 0.875;
+}
 .t2{
     display: flex;
     padding-top: 5px;
@@ -80,6 +83,8 @@ label.validation-error{
 }
 .table{
     display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
     
 }
 .event, #subevent1
@@ -90,7 +95,7 @@ label.validation-error{
     order: 2;
 }
 .dash{
-    flex-grow: 1;
+    flex-shrink: 3;
     padding-right: 10px;
     padding-left: 10px ;
     background: #a3c4c9;
@@ -101,10 +106,10 @@ label.validation-error{
     text-decoration:none;
     color: black;
     background-color: #ddd;
-    color: #000;
-    padding: 14px 15px;
+   
+    padding:  14px 15px;
     margin: 8px 0;
-    border: none;
+   
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
@@ -180,6 +185,9 @@ text-align: center;
     border-style: solid;
     border-width: auto;
     border-image-width: auto;
+    border-width: 1.4px;
+    background: white;
+    width: 60%;
 
 }
 .table{
@@ -196,10 +204,11 @@ text-align: center;
     
 }
 .list , .list1{
-    flex-grow: 1.5;
-    column-width: 3000px;
+    flex-grow: 2;
+    column-width: auto;
    
 }
 th{
     text-align: center;
+    font-size: 90%;
 }
