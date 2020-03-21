@@ -1,5 +1,6 @@
 body{
     zoom: 0.875;
+    overflow: hidden;
 }
 .t2{
     display: flex;
@@ -42,12 +43,13 @@ input[type=checkbox]{
 }
 input[type=radio]{
     width:50%;
-    padding: 12px 20px;
+    padding: 2px 0px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-right: 2px !important;
 
 }
 input[type=submit]{
@@ -63,6 +65,9 @@ input[type=submit]{
    
 
 form div.form-action-buttons,form div.form-action-buttons1{
+    text-align: right;
+}
+.form-action-buttons{
     text-align: right;
 }
 
@@ -83,16 +88,14 @@ label.validation-error{
 }
 .table{
     display: flex;
-    flex-grow: 1;
-    flex-shrink: 1;
-    
 }
 .event, #subevent1
 {
-    flex-grow: 2;
     justify-content: space-between;
     align-self: stretch;
-    order: 2;
+}
+.modal-right1{
+    text-align: right !important;
 }
 .dash{
     flex-shrink: 3;
@@ -118,10 +121,8 @@ label.validation-error{
 .dash li{
     padding-bottom: 25px;
 }
-#subevent1{
-    visibility: hidden;
-    margin-left: 15px;
-}
+
+
 .top2
 {
     background: #aebdb8;
@@ -138,31 +139,36 @@ label.validation-error{
     margin-left: 1%;
     font-size: 170%;
     background: #a3c4c9;
-    padding: 14px 15px;
+    padding: 10px 15px;
     border-radius: 4px;
     border:solid 1px;
+    margin-top: 6px;
 }
 .top2 nav {
     margin-left: auto;
     margin-right: 40px;
-    margin-top: 14px;
+    margin-top: 25px;
 }
 .top2 li{
     display: inline;
     margin: 0 20px 0 20px;
 }
 .top2 a{
-text-decoration: none;
-width: 30%;
-background-color: #ddd;
-color: #000;
-padding: 14px 20px;
-margin: 8px 0;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-text-align: center;
+    text-decoration: none;
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
 }
+.btn{
+    display: inline !important;
+}
+
 .list th,.list1 th{
     height: 50px;
     border:black
@@ -211,4 +217,19 @@ text-align: center;
 th{
     text-align: center;
     font-size: 90%;
+}
+
+.modal-login {
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    
+    width: 450px;
+  }
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-subevent{
+    height: 610px;
+    overflow-y: auto;
 }

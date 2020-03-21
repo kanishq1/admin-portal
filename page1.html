@@ -7,7 +7,17 @@
     <title>
         Admin Portal
     </title>
-    <link rel="stylesheet" href="styles.css">
+    
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+     <!-- Google Fonts -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+     <!-- Bootstrap core CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Material Design Bootstrap -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -15,12 +25,63 @@
         <label>ADMIN PORTAL</label>
         <nav>
             <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Your account</a></li>
+                <li><a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm" >LOG IN</a></li>
+                <!-- <li><a href="#">Your account</a></li> -->
             </ul>
         </nav>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="elegantModalForm" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-login" role="document">
+    <!--Content-->
+    <div class="modal-content form-elegant">
+        <!--Header-->
+        <div class="modal-header text-center">
+            <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <!--Body-->
+        <div class="modal-body mx-4">
+        <!--Body-->
+            <div class="md-form mb-5">
+                <input type="email" id="Form-email1" class="form-control validate">
+                <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
+            </div>
+
+            <div class="md-form pb-3">
+                <input type="password" id="Form-pass1" class="form-control validate">
+                <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
+                <p class="font-small blue-text d-flex justify-content-end"><a href="#" class="blue-text ml-1">
+                   Forgot Password?</a></p>
+            </div>
+
+            <div class="text-center mb-3">
+                <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
+            </div>
+            <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+                with:</p>
+
+            <div class="row my-3 d-flex justify-content-center">
+                <!--Google +-->
+                <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
+            </div>
+        </div>
+        <!--Footer-->
+        <div class="modal-footer mx-5 pt-3 mb-1">
+            <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
+                Sign Up</a></p>
+        </div>
+    </div>
+    <!--/.Content-->
+    </div>
+    </div>
+    <!-- Modal -->
+
+    
     <div class=table>
         <div class="dash">
             <br>
@@ -33,7 +94,9 @@
                     <li>Designation</li>
                     <li>Department</li>
                     <br>
-                    <li><a href="index.html">ADD EVENTS</a></li>
+                    <li><!-- Button trigger modal -->
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#test-modal">ADD EVENT</button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -67,13 +130,127 @@
             </thead>
             <tbody>
             </tbody>
-        </table>
-
-        
+        </table>   
     </div>
+
+
+
+    <div class="container">
         
+      
+        <div class="modal fade" id="test-modal" data-modal-index="1" data-backdrop="false">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4>ADD EVENT</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <form onsubmit="event.preventDefault();onFormSubmit1();" autocomplete="off" class="event">
+                        <div>
+                            <label>Name</label><label class="validation-error hide" id="NameValidationError">This field is required.</label>
+                            <input type="text" name="Name" id="Name">
+                        </div>
+                        <div>
+                            <label>From</label>
+                            <input type="date" name="fromdate" id="fromdate">
+                        </div>
+                        <div>
+                            <label>Till</label>
+                            <input type="date" name="tilldate" id="tilldate">
+                        </div>
+                        <div>
+                            <label>Organisation</label>
+                            <input type="text" name="Organisation" id="Organisation">
+                        </div>
+                        <div>
+                            <label>Expiration</label>
+                            <input type="date" name="exp" id="exp">
+                        </div>
+                    </form>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Next</button>
+                </div>
+            </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+      
+      
+        <div class="modal fade" id="test-modal-2" data-modal-index="2" data-backdrop="false">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">ADD SUBEVENT</h4>
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    
+                </div>
+                <div class="modal-body modal-subevent">
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" id="subevent1">
+                        <div>
+                            <label>Name</label><label class="validation-error hide" id="NameValidationError">This field is required.</label>
+                            <input type="text" name="subName" id="subName">
+                        </div>
+                        <div>
+                            <label>Discription</label>
+                            <input type="text" name="desc" id="desc">
+                        </div>
+                        <div>
+                            <label>Price</label>
+                            <input type="text" name="price" id="price">
+                        </div>
+                        
+                        <div>
+                            <label>Tshirt</label>
+                            <br>
+                            <input type="radio" name="tshirt" id="tshirt" value="Yes"> Yes
+                            <input type="radio" name="tshirt" id="tshirt" value="No"> No
+                            
+                        </div>
+                        <br>
+                        <div>
+                            <label>Sizes</label>
+                            <br>
+                            <input type="checkbox" name="size" id="size" value="S"> S
+                            <input type="checkbox" name="size" id="size" value="M"> M
+                            <input type="checkbox" name="size" id="size" value="L"> L
+                            <input type="checkbox" name="size" id="size" value="XL"> XL
+                            <input type="checkbox" name="size" id="size" value="XXL"> XXL
+                        </div>
+                    </form>
+                    <br>
+                    <br>
+                    <div  class="form-action-buttons">
+                        <button type="button" onclick="removeevent()">Remove</button>
+                        <button type="button" onclick="addevent()">Add SubEvent</button>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
     
+            
+        
+        
     <script src="script.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
 
 </body>
 

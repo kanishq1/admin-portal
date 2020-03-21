@@ -90,8 +90,44 @@ function validate() {
     }
     return isValid;
 }
+function removeevent(){
+    document.getElementById("subevent1").removeChild(document.getElementById("subform"));
+}
 function addevent() {
-    document.getElementById("subevent1").style.visibility="visible";
+   var subform = document.createElement("form");
+   subform.id="subform"
+   subform.innerHTML = ` <hr>
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" id="subevent1">
+                <div>
+                    <label>Name</label><label class="validation-error hide" id="NameValidationError">This field is required.</label>
+                    <input type="text" name="subName" id="subName">
+                </div>
+                <div>
+                    <label>Discription</label>
+                    <input type="text" name="desc" id="desc">
+                </div>
+                <div>
+                    <label>Price</label>
+                    <input type="text" name="price" id="price">
+                </div>
+                <div>
+                <label>Tshirt</label>
+                <br>
+                <input type="radio" name="tshirt" id="tshirt" value="Yes"> Yes
+                <input type="radio" name="tshirt" id="tshirt" value="No"> No
+                </div>
+                <br>
+                <div>
+                    <label>Sizes</label>
+                    <br>
+                    <input type="checkbox" name="size" id="size" value="S"> S
+                    <input type="checkbox" name="size" id="size" value="M"> M
+                    <input type="checkbox" name="size" id="size" value="L"> L
+                    <input type="checkbox" name="size" id="size" value="XL"> XL
+                    <input type="checkbox" name="size" id="size" value="XXL"> XXL
+                </div>
+            </form>`
+    document.getElementById("subevent1").appendChild(subform);      
 }
 
 
@@ -176,3 +212,26 @@ function onDelete(td) {
         resetForm();
     }
 }
+
+$('.btn[data-toggle=modal]').on('click', function(){
+  var $btn = $(this);
+  var currentDialog = $btn.closest('.modal-dialog'),
+  targetDialog = $($btn.attr('data-target'));;
+  if (!currentDialog.length)
+    return;
+  targetDialog.data('previous-dialog', currentDialog);
+  currentDialog.addClass('aside');
+  var stackedDialogCount = $('.modal.in .modal-dialog.aside').length;
+  if (stackedDialogCount <= 5){
+    currentDialog.addClass('aside-' + stackedDialogCount);
+  }
+});
+
+$('.modal').on('hide.bs.modal', function(){
+  var $dialog = $(this);  
+  var previousDialog = $dialog.data('previous-dialog');
+  if (previousDialog){
+    previousDialog.removeClass('aside');
+    $dialog.data('previous-dialog', undefined);
+  }
+});
