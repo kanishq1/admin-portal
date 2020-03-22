@@ -11,19 +11,20 @@ table{
     border-collapse: collapse;
 }
 
-td, th {
+td, th, tr {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
-tr:nth-child(even),table.list1 thead>tr {
+
+tr:nth-child(odd),table.list thead>tr {
     background-color: #dddddd;
 }
-tr:nth-child(even),table.list thead>tr {
-    background-color: #dddddd;
+th{
+    background-color:#9E9E9EFF ;
 }
 
-input[type=text], input[type=number], input[type=date]{
+input[type=text], input[type=number], input[type=date], input[type=file]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -164,21 +165,42 @@ label.validation-error{
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
+   
 }
 .btn{
     display: inline !important;
 }
 
-.list th,.list1 th{
+.list th{
     height: 50px;
     border:black
 }
-.list1{
-    margin-left: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
+.sbev{
+    list-style: none;
     
 }
+.sbev a{
+    background: none !important;
+    color: blue;
+    text-transform: none;
+    border: none;
+    box-shadow: none;
+    font-size: 90%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;;
+}
+.sbev a:hover{
+    background: none !important;
+    color: blue !important;
+    text-transform: none;
+    border: none;
+    box-shadow: none;
+}
+/* .sbeva:focus,.sbeva:active,.sbeva:av{
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
+} */
 #dashl{
     
     justify-content: center;
@@ -214,10 +236,11 @@ label.validation-error{
     column-width: auto;
    
 }
-th{
-    text-align: center;
+/* th, tr{
+    text-align: center !important;
     font-size: 90%;
-}
+} */
+
 
 .modal-login {
     position: absolute;
@@ -232,4 +255,14 @@ th{
 .modal-subevent{
     height: 610px;
     overflow-y: auto;
+
 }
+.listsb{
+    width: 100%;
+}
+/* .modal-listsbev{
+    width: 700px;
+    position: absolute;
+    right: 12%;
+    top: 23%;
+} */
