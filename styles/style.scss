@@ -1,0 +1,29 @@
+
+.subeventform{
+    padding: 5% 5% 2% 5%;
+    border: 1px solid gray;
+
+}
+input[type=date],input[type=datetime-local]{
+    color: transparent;
+    &:focus{
+        color: gray;
+    }
+}
+.cards1{
+    display: inline !important;
+}
+
+@media (min-width: 768px){
+.col-md-6 {
+    
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 25%;
+    max-width: 50%;
+}
+}
+.modal-subevent{max-width: 80%;
+    margin: 1.75rem auto;
+    height: 70%;
+}
